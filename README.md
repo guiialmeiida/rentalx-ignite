@@ -11,7 +11,6 @@ O usuário responsável pelo cadastro deve ser um usuário administrador.
 
 **RF**
 Deve ser possível cadastrar uma nova categoria.
-Deve ser possível listar todas as categorias.
 
 **RN**
 Não deve ser possível cadastrar uma categoria com um nome já existente.
