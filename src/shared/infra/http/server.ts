@@ -1,7 +1,7 @@
 
 import "@shared/container";
 import { AppError } from "@shared/errors/AppError";
-import "@shared/infra/typeorm";
+import createConnection from "@shared/infra/typeorm";
 import express, { NextFunction, Request, Response } from "express";
 import "express-async-errors";
 import swaggerUi from "swagger-ui-express";
@@ -16,6 +16,8 @@ app.use(express.json());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 app.use(router);
+
+createConnection();
 
 app.use((err: Error, request: Request, response: Response, next: NextFunction) => {
     if (err instanceof AppError) {
