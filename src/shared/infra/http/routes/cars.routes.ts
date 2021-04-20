@@ -1,5 +1,5 @@
 import { CreateCarController } from "@modules/cars/useCases/createCar/CreateCarController";
-import { ListCategoriesController } from "@modules/cars/useCases/listCategories/ListCategoriesController";
+import { ListAvailableCarsController } from "@modules/cars/useCases/listAvailableCars/ListAvailableCarsController";
 import { Router } from "express";
 import { ensureAdmin } from "../middlewares/ensureAdmin";
 import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
@@ -7,7 +7,7 @@ import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
 const carsRoutes = Router();
 
 const createCarController = new CreateCarController();
-const listAvailableCarsController = new ListCategoriesController();
+const listAvailableCarsController = new ListAvailableCarsController();
 
 carsRoutes.post(
     "/",
