@@ -7,7 +7,7 @@ import { resolve } from "path";
 import { inject, injectable } from "tsyringe";
 import { v4 as uuidV4 } from "uuid";
 
-injectable()
+@injectable()
 class SendForgotPasswordMailUseCase {
     constructor(
         @inject("UsersRepository")
